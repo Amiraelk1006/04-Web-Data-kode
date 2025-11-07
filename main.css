@@ -1,0 +1,141 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+/* Header */
+header {
+    background: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+/* Navigation */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: floralwhite;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: whitesmoke;
+}
+
+/* Search */
+.search-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.search-section input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: white;
+}
+
+.search-section button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #40509e;
+    color: white;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background: #596cd9;
+}
+
+/* Content Boxes */
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.content-box {
+    background: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.content-box h2 {
+    margin-top: 0;
+}
+
+/* Footer */
+
+/* FOOTER MED 3 KOLONNER */
+.info-footer {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    border-top: 2px solid #333;
+    color: whitesmoke;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: lightslategrey;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1a1a1a;
+    margin-top: 20px;
+    border-top: 2px solid #333;
+}
