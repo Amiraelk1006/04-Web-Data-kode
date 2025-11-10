@@ -1,5 +1,5 @@
 
-// Chart 1: Top 3 Genres
+// Chart 1: Top 3
 
 const chart1 = new Chart(document.getElementById('chart1'), {
     type: 'bar',
