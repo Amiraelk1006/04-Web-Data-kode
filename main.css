@@ -1,126 +1,195 @@
-
+/* overordnet der gælder hele siden */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background: #111;
     color: white;
+    line-height: 1.8; /* lidt mellemrum */
 }
 
-/* Header */
+/* HEADER */
+/* Det øverste med title og log in */
 header {
+    position: relative;
     background: #1a1a1a;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     border-bottom: 2px solid #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
+/* title */
 header h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: 34px;
+    background: linear-gradient(90deg, #a78bfa, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Navigation */
+/*  de tre hovedemenuer  */
 nav {
     margin-top: 10px;
+    position: relative;
 }
 
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: floralwhite;
+    color: #eee;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: whitesmoke;
+    color: #a78bfa;
 }
 
-/* Search */
+/* log in knappen oppe i højre hjørne */
+.login-btn {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(to right, #6d28d9, #8b5cf6);
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #8b5cf6, #a78bfa);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
+}
+
+
+/* Søgefelt */
 .search-section {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .search-section input {
-    width: 300px;
-    padding: 8px;
+    width: 320px;
+    padding: 10px;
     border-radius: 6px;
-    border: none;
+    border: 1px solid #333;
     outline: none;
     background: #222;
     color: white;
 }
 
 .search-section button {
-    padding: 8px 16px;
+    padding: 10px 18px;
     border: none;
     border-radius: 6px;
-    background: #40509e;
+    background: #5b21b6;
     color: white;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .search-section button:hover {
-    background: #596cd9;
+    transform: scale(1.05);
+    background: #7e22ce;
 }
 
-/* Content Boxes */
-main {
+/* Rækker med tekst og lilla bokse */
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px auto;
     width: 80%;
-    margin: auto;
-    padding: 20px 0;
+    gap: 40px;
 }
 
+.content-row.reverse {
+    flex-direction: row-reverse;
+}
+/*teksten ved siden af boksene */
+.text {
+    flex: 1;
+    font-size: 18px;
+    color: #ccc;
+    letter-spacing: 0.5px;
+}
+
+/* de lilla bokse */
 .content-box {
-    background: #1a1a1a;
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
     padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #333;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* farve fra bund til top */
+    background: linear-gradient(to top, #3b0764, #7e22ce);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Effekt når man holder musen over boksen*/
+.content-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+}
+
+
+.content-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
 }
 
 .content-box h2 {
-    margin-top: 0;
+    margin: 0;
+    font-size: 20px;
 }
 
 /* Footer */
-
-/* FOOTER MED 3 KOLONNER */
-.info-footer {
+footer {
+    width: 100%;
     background-color: #1a1a1a;
-    padding: 40px 0;
-    border-top: 2px solid #333;
     color: whitesmoke;
+    padding: 40px 0 20px 0;
+    border-top: 2px solid #333;
+    text-align: center;
 }
 
+/* Kolonner i footeren*/
 .footer-container {
-    width: 85%;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    text-align: left;
 }
 
 .footer-column {
-    width: 30%;
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
 }
 
 .footer-column h4 {
     margin-bottom: 15px;
     font-size: 18px;
-    color: white;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column li {
-    margin-bottom: 8px;
+    color: #a78bfa;
 }
 
 .footer-column a {
@@ -132,10 +201,52 @@ main {
     color: white;
 }
 
-footer {
+footer p {
+    margin-top: 30px;
+    color: white;
     text-align: center;
-    padding: 15px;
-    background: #1a1a1a;
-    margin-top: 20px;
-    border-top: 2px solid #333;
+    font-size: 14px;
+}
+
+
+
+/* random sang knap*/
+.container {
+    text-align: center;
+    margin: 50px auto;
+}
+/*  Teksten over knappen */
+#textHere {
+    font-size: 18px;
+    color: #d1c4e9;
+    margin-bottom: 20px;
+}
+
+
+
+/* selve snappen */
+.RandomSong {
+    background: linear-gradient(to right, #7e22ce, #9333ea);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.RandomSong:hover {
+    background: linear-gradient(to right, #9333ea, #c084fc);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(192, 132, 252, 0.6);
+}
+
+/* Gør teksten i midten */
+#textHere {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0d7ff;
+    margin-bottom: 20px;
+    text-align: center;
 }
