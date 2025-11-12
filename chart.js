@@ -40,7 +40,7 @@ addSong.addEventListener("click", function(){
     textElement.innerText = songText;
 });
 
-/*   Jeg lavede en div hvor jeg har smidt knappen ind.
+/*   Jeg lavede en div hvor  jeg har smidt knappen ind.
 div clas "container"
 <p> id "textHere"
 knap id "songButton"
